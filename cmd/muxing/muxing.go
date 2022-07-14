@@ -40,7 +40,7 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 func handleParam(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Hello, " + vars["param"] + "!"))
+	w.Write([]byte("Hello, " + vars["PARAM"] + "!"))
 }
 
 func badRequest(w http.ResponseWriter, r *http.Request) {
